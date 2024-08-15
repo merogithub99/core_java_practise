@@ -4,6 +4,12 @@ public class BankUser {
     String accountNumber;
     int balance;
     String accountHolderName;
+    String pin;
+
+
+    public BankUser() {
+    }
+
 
     public String getAccountNumber() {
         return accountNumber;
@@ -29,14 +35,23 @@ public class BankUser {
         this.accountHolderName = accountHolderName;
     }
 
-    public BankUser(String accountNumber, int balance, String accountHolderName) {
+    public String getPin() {
+        return pin;
+    }
+
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
+
+
+    public BankUser(String accountNumber, int balance, String accountHolderName, String pin) {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.accountHolderName = accountHolderName;
+        this.pin = pin;
     }
 
-    public BankUser() {
-    }
 
     @Override
     public String toString() {
@@ -44,6 +59,7 @@ public class BankUser {
                 "accountNumber='" + accountNumber + '\'' +
                 ", balance=" + balance +
                 ", accountHolderName='" + accountHolderName + '\'' +
+                ", pin='" + pin + '\'' +
                 '}';
     }
 }

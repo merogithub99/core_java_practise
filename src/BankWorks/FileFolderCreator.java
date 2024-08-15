@@ -16,11 +16,10 @@ public class FileFolderCreator {
                 Files.createDirectories(dirPath);
             } catch (Exception exception) {
                 System.out.println("something bad has happened");
-                ;
             }
 
         } else {
-            System.out.println("file already there!");
+            System.out.println("directory already there!");
         }
     }
 
@@ -37,7 +36,7 @@ public class FileFolderCreator {
                 fileWriter.write(message + "\t" + System.lineSeparator());
                 System.out.println("Message send to file system ");
             } catch (IOException e) {
-                System.out.println("An error occurred while writing to the file: " + e.getMessage());
+                System.out.println(" error : " + e.getMessage());
             }
         } catch (IOException e) {
             System.out.println("An error occurred: " + e.getMessage());
